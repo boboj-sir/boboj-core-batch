@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.boboj.core.batch</groupId>
+    <artifactId>boboj-core-batch</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!--        <spring.batch.core.version>5.1.0</spring.batch.core.version>-->
+        <spring.batch.core.version>4.3.8</spring.batch.core.version>
+        <!--        <apache.poi.version>5.2.5</apache.poi.version>-->
+        <apache.poi-ooxml.version>4.1.2</apache.poi-ooxml.version>
+        <lombok.version>1.18.30</lombok.version>
+        <groovy.version>4.0.17</groovy.version>
+        <hutool-core.version>5.8.23</hutool-core.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>${spring.batch.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${apache.poi-ooxml.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy -->
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy</artifactId>
+            <version>${groovy.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-core -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+            <version>${hutool-core.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.monitorjbl/xlsx-streamer -->
+        <dependency>
+            <groupId>com.monitorjbl</groupId>
+            <artifactId>xlsx-streamer</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-osc</id>
+            <name>Nexus osc</name>
+            <url>https://nexus.biuyoudead.com/repository/release-maven/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id> <!-- 选择settings文件中的快照版本的id-->
+            <name>Nexus snapshots</name>
+            <url>https://nexus.biuyoudead.com/repository/snapshot-maven/</url><!-- 私服地址-->
+        </snapshotRepository>
+    </distributionManagement>
+</project>
